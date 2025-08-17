@@ -1,0 +1,132 @@
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<title>Registration Forms</title>
+	<link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/512/2080/2080887.png">
+	
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+	<link rel="stylesheet" href="w5 style.css">
+	
+	<style>
+		#thankYouMessage {
+			display: none;
+			text-align: center;
+			font-size: 20px;
+		}
+	</style>
+	
+	<script>
+		function validateForm(event) {
+			event.preventDefault();
+			const age = document.getElementById('age').value;
+			if (age < 15) {
+				alert('Error: Age must be 15 or above.');
+			} else {
+				alert('Thank you for registering!');
+				document.getElementById('registrationForm').submit();
+			}
+		}
+		
+		function submitForm() {
+			const formData = new FormData(document.getElementById('registrationForm'));
+			console.log('Submitting form with data:', formData);
+			
+			fetch('submit_registration_endpoint', {
+				method: 'POST',
+				body: formData
+			})
+			
+			.then(response => {
+				console.log('Response:', response);
+				return response.json();
+			})
+			
+			.then(data => {
+				console.log('Data:', data);
+				if (data.success) {
+					alert('Form submitted successfully!');
+				} else {
+					alert('Error submitting form.');
+				}
+			})
+			
+			.catch(error => {
+				console.error('Error: ',error);
+				alert('An error occurred while submitting the form.');
+			});
+		}
+	</script>
+		
+</head>
+
+<body>
+	<table style="width:60%" class="center">
+	<form id="registrationForm" onsubmit="validateForm(event)">
+	
+	<tr>
+		<th colspan="2">
+		<h1>Registration Forms</h1>
+		</th>
+	</tr>
+	
+	<tr>
+		<td> <label for="fname">First Name: </label> </td>
+		<td> <input type="text" id="fname" name="fname" required> </td>
+	</tr>
+	
+	<tr>
+		<td> <label for="lname">Last Name: </label> </td>
+		<td> <input type="text" id="lname" name="lname" required> </td>
+	</tr>
+	
+	<tr>
+		<td> <label for="age">Age: </label> </td>
+		<td> <input type="number" id="age" name="age" required> </td>
+	</tr>
+	
+	<tr>
+		<td> <label for="email"> <i class="fas fa-envelope"></i> Email Address: </label> </td>
+		<td> <input type="email" id="email" name="email" required> </td>
+	</tr>
+	
+	<tr>
+		<td> <label for="phone"> <i class="fas fa-phone"></i> Phone Number: </label> </td>
+		<td> <input type="tel" id="phone" name="phone" required> </td>
+	</tr>
+	
+	<tr>
+		<td>Gender: </td>
+		
+		<td>
+			<input type="radio" id="male" name="gender" value="male">
+			<label for="male">Male</label></br>
+			
+			<input type="radio" id="female" name="gender" value="female">
+			<label for="female">Female</label>
+		</td>
+		
+	</tr>
+	
+	<tr>
+		<td colspan="2" style="text-align: center;">
+			<button type="submit" class="btn btn-primary">Submit</button>
+		</td>
+	</tr>
+	
+	</form>
+	
+	<div id="thankYouMessage">
+		<h2>Thank you for registering!</h2>
+	</div>
+	</table>
+	
+	<footer style="text-align:center;">
+		<p>&copy; 2024 Australian Mathematics Competition | New Era University College</p>
+	</footer>
+</body>
+
+</html>

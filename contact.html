@@ -1,0 +1,127 @@
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<title>Contact Us!</title>
+	<link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/512/3771/3771518.png">
+	
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+	
+	<style>
+		.back-button {
+			position: fixed;
+			top: 10px;
+			left: 10px;
+			padding: 10px 20px;
+			background-color: white;
+			color: green;
+			border: none;
+			font-size: 18px;
+			cursor: pointer;
+			z-index: 1000; <!--ensure btn stays on top-->
+		}
+		
+		.back-button:hover {
+			background-color: #ADEFC8;
+		}
+		
+		.content {
+			display: flex;
+			align-items: flex-start;
+			padding: 50px 10px 10px 10px;
+		}
+		
+		.content img {
+			width: 300;
+			height: auto;
+			margin-right: 20px;
+		}
+		
+		table {
+			width: 60%;
+			border-collapse: collapse;
+		}
+		
+		th, td {
+			text-align: left;
+			padding: 8px;
+		}
+		
+		th {
+			width: 20%;
+		}
+		
+		tr:nth-child(even) {
+			background-color: #f2f2f2;
+		}
+		
+		table.center {
+			margin-left: auto;
+			margin-right: auto;
+		}
+	</style>
+	
+</head>
+
+<body>
+	<button class="back-button" onclick="goBack()">
+		<i class="fas fa-arrow-left"></i> Back
+	</button>
+	
+	<div class="content">
+		<img src="https://img.freepik.com/premium-vector/flat-man-customer-support_23-2148893293.jpg">
+	
+	<table class="center">
+		<tr>
+			<th colspan="2">
+				<h2>Australian Mathematics Competition Working Committee</h2>
+			</th>
+		</tr>
+		
+		<tr>
+			<th style="width:20%">Address:</th>
+			<td>Faculty of Computer Science and Information Computing Technology, <br>
+				New Era University College <br>
+				Blok B, Lot 5, Seksyen 10, <br>
+				Jalan Bukit, 43000 Kajang, Selangor.</td>
+		</tr>
+		
+		<tr>
+			<th>Telephone:</th>
+			<td>03-87406392 Ext: 418</td>
+		</tr>
+		
+		<tr>
+			<th>Email:</th>
+			<td> <a href="mailto:amc@newera.edu.my" target="_blank">amc@newera.edu.my</a> </td>
+		</tr>
+		
+		<tr>
+			<th>Information Website:</th>
+			<td> <a href="about.html"> About </a> </td>
+		</tr>
+		
+		<tr>
+			<th>Online Registration Website:</th>
+			<td> <a href="register.html" target="_blank">Registration</a> </td>
+		</tr>
+		
+		<tr>
+			<th>AMT Official Website</th>
+			<td> <a href="http://www.amt.edu.au" target="_blank">http://www.amt.edu.au</a> </td>
+		</tr>
+	</table>
+	
+	</div>
+	<script>
+		function goBack() {
+			window.history.back();
+		}
+	</script>
+	
+</body>
+
+</html>

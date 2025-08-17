@@ -1,0 +1,211 @@
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<title>About Us</title>
+	<link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/512/11712/11712819.png">
+	
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+	
+	<style>
+		.back-button {
+			position: absolute;
+			top: 10px;
+			left: 10px;
+			padding: 10px 20px;
+			background-color: rgba(255, 255, 255, 0.8);
+			color: black;
+			border: none;
+			font-size: 18px;
+			cursor: pointer;
+			z-index: 1000; <!--ensure btn stays on top-->
+		}
+		
+		.back-button:hover {
+			background-color: rgba(255, 255, 255, 0.9);
+		}
+		
+		.header {
+			width: 100%;
+			height: 350px;
+			position: relative;
+			background-image: url('https://www.alberts.edu.in/wp-content/uploads/2018/10/maths-e1550462732508.jpg');
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			color: white;
+			text-shadow:2px 2px 4px rgba(0, 0, 0, 0.7);
+		}
+		
+		.header::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(255, 255, 255, 0.7);
+			z-index: 1; <!--make sure the overlay is behind the text-->
+		}
+		
+		.header-text {
+			position: relative;
+			z-index: 2;
+			font-size: 36px;
+			font-weight: bold;
+			transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+		}
+		
+		.header-text:hover {
+			transform: scale(1.1);
+			color: #27AE60;
+		}
+		
+		.container {
+			text-align: center;
+			max-width: 800px;
+			padding: 20px;
+		}
+		
+		h2 {
+			font-size: 24px;
+			margin-bottom: 20px;
+		}
+		
+		p {
+			font-size: 18px;
+			color: #555;
+			line-height: 1.5;
+		}
+		
+		.container2 {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding: 20px;
+		}
+		
+		.text-section {
+			flex: 1;
+			max-width: 50%;
+			padding-right: 20px;
+		}
+		
+		.text-section h3 {
+			font-size: 24px;
+			margin-bottom: 20px;
+		}
+		
+		.text-section p {
+			font-size: 18px;
+			color: #555;
+			line-height: 1.5;
+			margin-bottom: 20px;
+		}
+		
+		.image-section {
+			flex: 1;
+			max-width: 50%;
+		}
+		
+		.image-section img {
+			width: 100%;
+			height: auto;
+			border-radius: 8px;
+		}
+		
+		.container3 {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			flex-direction: row-reverse;
+			padding: 20px;
+		}
+	</style>
+</head>
+
+<body>
+	<button class="back-button" onclick="goBack()">
+		<i class="fas fa-arrow-left"></i> Back
+	</button>
+	
+	<script>
+		function goBack() {
+			window.history.back();
+		}
+	</script>
+	
+	<header class="header">
+		<div class="header-text">Australian Mathematic Competition</div>
+	</header>
+	
+	<div class="container">
+	<h2> <br>About the competition</h2>
+	<p>The Australian Mathematics Competition (AMC) has 25 multiple-choice questions and five questions that require whole number answers. Students may attempt as many questions as they wish. The earlier problems may use familiar mathematics while the later problems are more difficult and are intended to challenge. It is not a test on the curriculum but an opportunity for students to display or discover their problem-solving talent.</p>
+	</div>
+	
+	<div class="container2">
+		<div class="text-section">
+			<h3>Benefits to Students</h3>
+			<p> <ul>
+				<li>All students receive a detailed report showing how they went on each problem, with comparisons as to wider statistics.</li>
+				<li>All students receive a certificate or award commensurate with their performance.</li>
+				<li>The AMC provides the student an extra opportunity for external recognition. The certificates are often kept by students for their folios. They are well understood by employers and so can be used as evidence of problem solving ability.</li>
+				<li>Unlike formal examinations in mathematics, many of the problems are set in situations to which students can relate, indicating the relevance of mathematics in their everyday lives. Above all the competition is designed to be enjoyable, even for those students who might not have performed as well as they may have hoped. Certainly the event is intended to be conducted in a pressure-free environment (not normally affecting school assessment) and the questions are designed to be of sufficient interest to stimulate discussion at a later time, with friends, parents or in the class.</li>
+				<li>Competitions can inspire a greater interest in the subject and a love of learning.</li>
+				<li>Students are given an opportunity to participate in a large event attempting the same problems as students in other schools and other countries.</li>
+			</p> </ul>
+		</div>
+		
+		<div class="image-section">
+			<img src="https://www.uni.lu/wp-content/uploads/sites/4/2023/07/MMATH_1.jpg">
+		</div>
+	</div>
+	
+	<div class="container3">
+		<div class="text-section">
+			<h3>Benefits to Schools</h3>
+			<p>In addition to the direct benefits to students, all schools which enter the AMC receive, free of charge, a confidential set of statistics which the school can use in checking its performances overall, and by topic, with statistics overall for their state or region.</p>
+		</div>
+		
+		<div class="image-section">
+			<img src="https://cdn.cdnparenting.com/articles/2020/11/01194956/1588916176-1024x700.webp">
+		</div>
+	</div>
+	
+	<div class="container2">
+		<div class="text-section">
+			<h3>Results</h3>
+			<p>Results are based on the total score: Questions 1 to 10 are worth 3 points, 11 to 20 are worth 4 points and 21 to 25 are worth 5 points. Questions 26 to 30 are worth 6, 7, 8, 9 and 10 points, respectively. Students with the same number of correct answers may have different scores.<br></br>
+
+			Awards up to Prize are decided by comparing total scores within the country or Australian state and school year of the student. A student in a particular year in a country or Australian state will only be compared with other students in the same group. As a result there will be different cut-offs for awards in different locations.<br></br>
+
+			All students will receive the highest possible of the following awards. Generally,<br>
+		<ul>
+			<li>PRIZE is awarded to no more than one student for every 300 students within their year and region.</li>
+			<li>HIGH DISTINCTION is awarded to a student in the top 3% (top 5% for Senior) of their year and region.</li>
+			<li>DISTINCTION is awarded to a student in the top 20% (top 25% for Senior) of their year and region.</li>
+			<li>CREDIT is awarded to a student in the top 55% (top 60% for Senior) of their year and region.</li>
+			<li>PROFICIENCY is awarded to students who achieve a preset score, but have not been awarded a Credit (or higher) certificate. The score will be set no higher than 32 points.</li>
+			<li>PARTICIPATION is awarded to all other students.</li>
+			<li>BEST IN SCHOOL is awarded to the student with the highest AMC score in a school (after statistical calibration), based on the minimum achievement of Distinction award, and minimum AMC entries of 50 (secondary) or 30 (primary).</li>
+		</ul>
+		</div>
+		
+		<div class="image-section">
+			<img src="https://st2.depositphotos.com/4021139/7734/i/450/depositphotos_77346754-stock-photo-get-results-concept-on-blackboard.jpg">
+		</div>
+	</div>
+	
+	<footer style="background-color:#f8f9fa; text-align:center;">
+		<p>&copy; 2024 Australian Mathematics Competition | New Era University College</p>
+	</footer>
+</body>
+
+</html>

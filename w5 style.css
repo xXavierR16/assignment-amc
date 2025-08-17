@@ -1,0 +1,50 @@
+body{
+	margin: 0;
+	background: linear-gradient(45deg, #7DCEA0, #A9DFBF, #D4EFDF);
+}
+
+h1 {
+	color: black;
+	margin-left: 20px;
+	text-align: center;
+}
+
+p{
+	color: black;
+}
+
+table, th{
+	border: 1px solid black;
+	border-style: dotted;
+	text-align: center-left;
+	font-size: 20px;
+	background-color: #f8f9fa;
+}
+
+td:first-child {
+	width: 30%;
+	border: 1px solid black;
+	border-style: dotted;
+	text-align: center-left;
+	font-size: 20px;
+}
+
+td:last-child {
+	width: 70%;
+	border: 1px solid black;
+	border-style: dotted;
+	text-align: center-left;
+	font-size: 20px;
+}
+
+table, th ,td{
+	border: 1px solid black;
+	border-style: hidden;
+	text-align: center-left;
+	vertical-align: top;
+}
+			
+table.center{
+	margin-left: auto;
+	margin-right: auto;
+}
